@@ -1,0 +1,304 @@
+/* pages/guidance/guidance.wxss */
+page {
+    height: 100%;
+}
+
+.bgc {
+    height: 100%;
+    width: 100%;
+}
+
+.one,
+.two {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: all 1.5s ease;
+}
+
+.one {
+    padding: 12% 50rpx;
+    top: 0;
+}
+
+.two {
+    padding: 32% 62rpx;
+    overflow: hidden;
+}
+
+.main {
+    padding: 20rpx;
+    height: 100%;
+    background: #fff;
+}
+
+.content {
+    height: 100%;
+    background: #FFFAFA;
+    border: 6rpx solid #F8C5BB;
+}
+
+.one .content {
+    padding-left: 22rpx;
+    border-radius: 8rpx;
+}
+
+.two .main {
+    position: relative;
+}
+
+.two .content {
+    padding: 130rpx 0 132rpx;
+    background: #fff;
+}
+
+/* 第一屏样式内容 */
+.logo,
+.english {
+    position: absolute;
+    width: 170rpx;
+    transition: all 2s ease;
+}
+
+.logo image {
+    width: 100%;
+}
+
+.english {
+    top: 340rpx;
+}
+
+.english image {
+    width: 100%;
+}
+
+.title {
+    position: absolute;
+    top: 440rpx;
+    height: auto;
+    display: flex;
+}
+
+.title view {
+    position: absolute;
+    width: 80rpx;
+    transition: all 0.5s ease 1.5s;
+}
+
+.title .ni {
+    transition: all 0.5s ease;
+}
+
+.title .wai {
+    transition: all 0.5s ease 0.5s;
+}
+
+.title .yin {
+    transition: all 0.5s ease 1s;
+}
+
+.title view image {
+    width: 100%;
+}
+
+.describe {
+    position: absolute;
+    top: 540rpx;
+    width: 253rpx;
+    transition: all 2s ease;
+}
+
+.describe image {
+    width: 100%;
+}
+
+.left {
+    position: absolute;
+    left: -296rpx;
+    top: 690rpx;
+    width: 296rpx;
+    transition: all 2s ease;
+}
+
+.left image {
+    width: 100%;
+}
+
+.right {
+    position: absolute;
+    bottom: 0;
+    right: -750rpx;
+    width: 750rpx;
+    transition: all 2s ease;
+}
+
+.right image {
+    width: 100%;
+}
+
+.next {
+    position: absolute;
+    left: 50%;
+    bottom: 75rpx;
+    width: 100rpx;
+    transform: translateX(-50%);
+    z-index: 9;
+}
+
+.next image {
+    width: 100%;
+}
+
+/* 第二屏样式 */
+.topRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 750rpx;
+    z-index: -1;
+    transition: all 2s ease;
+}
+
+.topRight image {
+    width: 100%;
+}
+
+.bottomCenter {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 750rpx;
+    transform: translateX(-50%);
+    transition: all 2s ease;
+}
+
+.bottomCenter image {
+    width: 100%;
+}
+
+.glodLeft {
+    position: absolute;
+    top: 0;
+    left: -12rpx;
+    width: 226rpx;
+    transition: all 2s ease;
+}
+
+.glodLeft image {
+    width: 100%;
+}
+
+.glodRight {
+    position: absolute;
+    bottom: -46rpx;
+    right: -26rpx;
+    width: 395rpx;
+    transition: all 2s ease;
+}
+
+.glodRight image {
+    width: 100%;
+}
+
+.introduce {
+    position: absolute;
+    top: 80rpx;
+    left: 50%;
+    width: 184rpx;
+    height: 46rpx;
+    display: flex;
+    transform: translateX(-50%);
+}
+
+.introduce view {
+    position: absolute;
+    width: 46rpx;
+}
+
+.chan {
+    transition: all 0.5s ease;
+}
+
+.pin {
+    left: 46rpx;
+    transition: all 0.5s ease 0.5s;
+}
+
+.jie {
+    left: 92rpx;
+    transition: all 0.5s ease 1s;
+}
+
+.shao {
+    left: 138rpx;
+    transition: all 0.5s ease 1.5s;
+}
+
+.introduce image {
+    width: 100%;
+}
+
+.name {
+    text-align: center;
+    font-size: 28rpx;
+    color: #677672;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.text {
+    padding: 20rpx 37rpx 0;
+    color: #667572;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    letter-spacing: 4rpx;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.btn-wrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 60rpx;
+}
+
+.btn {
+    font-size: 28rpx;
+    width: 160rpx;
+    text-align: center;
+    line-height: 60rpx;
+    color: #FFB4A4;
+    border-radius: 8rpx;
+    border: 1rpx solid #f4f4f4;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.tag {
+    position: absolute;
+    bottom: 132rpx;
+    left: 50%;
+    font-size: 24rpx;
+    color: #D3D6D5;
+    transform: translate(-50%, 50%);
+    transition: all 2s ease;
+}
+
+.tag::after,
+.tag::before {
+    position: absolute;
+    top: 50%;
+    content: '';
+    width: 95rpx;
+    height: 1rpx;
+    transform: translateY(-50%);
+    background: #D3D6D5;
+}
+
+.tag::before {
+    left: -108rpx;
+}
+
+.tag::after {
+    right: -108rpx;
+}

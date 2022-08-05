@@ -1,0 +1,84 @@
+<!--pages/guidance/guidance.wxml-->
+<!--引导页-->
+<!--背景图片-->
+<image class="bgc" src="/assess/images/guidance/bgc.jpeg"></image>
+<!--第一屏-->
+<view class="one" style="top: {{tab?'0rpx': '-100%'}}">
+  <view class="main">
+    <view class="content">
+      <view class="logo" style="top: {{oneStart?'200rpx': '-125rpx'}}">
+        <image bindload="loadding" src="/assess/images/guidance/logo.png" mode="widthFix"></image>
+      </view>
+      <view class="english" style="left: {{oneStart?'96rpx': '-296rpx'}}">
+        <image src="/assess/images/guidance/english.png" mode="widthFix"></image>
+      </view>
+      <view class="title">
+        <view class="ni" style="left: {{oneStart?'0':'750rpx'}};">
+          <image src="/assess/images/guidance/ni.png" mode="widthFix"></image>
+        </view>
+        <view class="wai" style="left: {{oneStart?'97rpx':'750rpx'}};">
+          <image src="/assess/images/guidance/wai.png" mode="widthFix"></image>
+        </view>
+        <view class="yin" style="left: {{oneStart?'193rpx':'750rpx'}};">
+          <image src="/assess/images/guidance/yin.png" mode="widthFix"></image>
+        </view>
+        <view class="yue" style="left: {{oneStart?'290rpx':'750rpx'}};">
+          <image src="/assess/images/guidance/yue.png" mode="widthFix"></image>
+        </view>
+      </view>
+      <view class="describe" style="left: {{oneStart?'96rpx':'-296rpx'}};">
+        <image src="/assess/images/guidance/describe.png" mode="widthFix"></image>
+      </view>
+      <view class="left" style="left: {{oneStart?'0':'-296rpx'}};">
+        <image src="/assess/images/guidance/yizuo.png" mode="widthFix"></image>
+      </view>
+      <view class="right" style="right: {{oneStart?'0':'-750rpx'}};">
+        <image src="/assess/images/guidance/yixiahua.png" mode="widthFix"></image>
+      </view>
+      <view class="next" animation="{{nextAni}}" bindtap="handleNext">
+        <image src="/assess/images/guidance/prev.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!--第二屏-->
+<view class="two" style="top: {{tab?'100%': '0rpx'}}">
+  <view class="topRight" style="left: {{twoStart?'0rpx': '100%'}}">
+    <image src="/assess/images/guidance/shang.png" mode="widthFix"></image>
+  </view>
+  <view class="bottomCenter" style="bottom: {{twoStart?'0rpx': '-194rpx'}}">
+    <image src="/assess/images/guidance/xia.png" mode="widthFix"></image>
+  </view>
+  <view class="main">
+    <view class="content">
+      <view class="glodLeft" style="left: {{twoStart?'-12rpx': '-390rpx'}}">
+        <image src="/assess/images/guidance/zuoshang.png" mode="widthFix"></image>
+      </view>
+      <view class="glodRight" style="right: {{twoStart?'-26rpx': '-460rpx'}}">
+        <image src="/assess/images/guidance/youxia.png" mode="widthFix"></image>
+      </view>
+      <view class="introduce">
+        <view class="chan" style="top: {{twoStart?'-0rpx': '-460rpx'}}">
+          <image src="/assess/images/guidance/chan.png" mode="widthFix"></image>
+        </view>
+        <view class="pin" style="top: {{twoStart?'-0rpx': '-460rpx'}}">
+          <image src="/assess/images/guidance/pin.png" mode="widthFix"></image>
+        </view>
+        <view class="jie" style="top: {{twoStart?'-0rpx': '-460rpx'}}">
+          <image src="/assess/images/guidance/jie.png" mode="widthFix"></image>
+        </view>
+        <view class="shao" style="top: {{twoStart?'-0rpx': '-460rpx'}}">
+          <image src="/assess/images/guidance/shao.png" mode="widthFix"></image>
+        </view>
+      </view>
+      <view class="name" animation="{{amplifyAni}}">腻歪音乐</view>
+      <view class="text" animation="{{amplifyAni}}">
+        腻歪音乐是诗一样的男人做的一个练习小程序的项目，项目分为前端小程序、后台管理系统、后台服务器。前端小程序打算用原生开发，可能会用到一些ui框架。后台管理系统因为最近在学写react，所以打算使用react。后台服务器使用node（koa框架）+
+        mysql</view>
+      <view class="btn-wrap">
+        <view class="btn" animation="{{amplifyAni}}" bindtap="handleSkip">立即体验</view>
+      </view>
+      <view class="tag" style="bottom: {{twoStart?'132rpx': '-260rpx'}}">诗一样的男人</view>
+    </view>
+  </view>
+</view>
