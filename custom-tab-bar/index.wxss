@@ -1,0 +1,67 @@
+/* custom-tab-bar/index.wxss */
+.tab-bar {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 120rpx;
+    /* background: white; */
+    display: flex;
+    flex-direction: row;
+    /* padding-bottom: env(safe-area-inset-bottom); */
+    background-image: url(data:image/png;base64,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);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tab-bar-border {
+    /* background-color: #e4e4e4; */
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 18rpx;
+}
+
+.tab-bar-item {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 16rpx;
+}
+
+.cover-image {
+    width: 46rpx;
+    height: 46rpx;
+}
+
+.coverStyle {
+    font-size: 22rpx;
+}
+
+.centerImage {
+    width: 120rpx;
+    height: 120rpx;
+    position: absolute;
+    top: -50rpx;
+    /* transform: translateX(1rpx); */
+    border-radius: 50%;
+}
+
+.imageRotate {
+    animation: rotateAnimation 20s infinite linear; 
+}
+.stop {
+    animation-play-state: paused;
+}
+.start {
+    animation-play-state: running;
+}
+
+@keyframes rotateAnimation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}

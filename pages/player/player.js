@@ -1,5 +1,4 @@
-// pages/home/home.js
-const app = getApp()
+// pages/player/player.js
 Page({
 
     /**
@@ -8,15 +7,14 @@ Page({
     data: {
 
     },
+
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        getApp().watch('songInfo',this.watchBack);
+
     },
-    watchBack(variate, method) {
-        console.log(variate, method,this);
-    },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -28,12 +26,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-        if (typeof this.getTabBar === 'function' &&
-            this.getTabBar()) {
-            this.getTabBar().setData({
-                selected: 0
-            })
-        }
+
     },
 
     /**

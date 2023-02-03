@@ -17,7 +17,23 @@ App({
         // 胶囊宽度
         this.globalData.menuWidth = menuButtonInfo.width;
         // 设备宽度
-        this.globalData.clientWidth = systemInfo.windowWidth
+        this.globalData.clientWidth = systemInfo.windowWidth;
+    },
+    watch: function (variate, method) {
+        var obj = this.globalData;
+        let val = obj[variate]; // 单独变量来存储原来的值
+        Object.defineProperty(obj, variate, {
+            configurable: false,
+            enumerable: true,
+            set: function (value) {
+                val = value; // 重新赋值
+                method(variate, value); // 执行回调方法
+            },
+            get: function () {
+                // 在其他界面调用getApp().globalData.variate的时候，这里就会执行。
+                return val; // 返回当前值
+            }
+        })
     },
     globalData: {
         userInfo: null,
@@ -27,5 +43,10 @@ App({
         menuBotton: 0, // 胶囊距底部间距（保持底部间距一致）
         menuHeight: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致）
         menuWidth: 0, // 胶囊宽度
+        songInfo: { // 播放歌曲的信息
+            image: 'http://139.196.78.237:5000/image/default_song.png', //歌曲图片
+            // image: 'http://139.196.78.237:5000/image/niwaiyinyue_0f61c554-0e0a-4a28-94e6-e86b4c130ff7.png', //歌曲图片
+        },
+        isPlay: true, // 是否正在播放
     }
 })

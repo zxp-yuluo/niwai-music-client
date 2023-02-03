@@ -1,4 +1,4 @@
-// pages/home/home.js
+// pages/profile/profile.js
 const app = getApp()
 Page({
 
@@ -12,10 +12,13 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        getApp().watch('songInfo',this.watchBack);
+
     },
-    watchBack(variate, method) {
-        console.log(variate, method,this);
+    click() {
+        const isPlay = this.getTabBar().data.isPlay
+        this.getTabBar().setData({
+            isPlay: !isPlay
+        });
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -31,7 +34,7 @@ Page({
         if (typeof this.getTabBar === 'function' &&
             this.getTabBar()) {
             this.getTabBar().setData({
-                selected: 0
+                selected: 2
             })
         }
     },
