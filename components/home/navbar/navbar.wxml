@@ -1,0 +1,4 @@
+<!--components/home/navbar/navbar.wxml-->
+<nw-navbar backgroundColor="#fafafa">
+    <view slot="center" class="title">腻歪音乐</view>
+</nw-navbar>

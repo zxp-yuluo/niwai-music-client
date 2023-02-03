@@ -1,0 +1,14 @@
+<!--components/home/today/today.wxml-->
+<view class="today">
+  <view class="date">
+    <text class="day">{{day}}</text>
+    <text class="month">{{month}}</text>
+    <text class="week">{{week}}</text>
+  </view>
+  <view class="weatherWrap" wx:if="{{weatherInfo}}">
+    <text class="weather">{{weatherInfo.weather}}</text>
+    <text class="temperature">{{weatherInfo.temperature}}</text>
+    <text class="unit">℃</text>
+  </view>
+</view>
+

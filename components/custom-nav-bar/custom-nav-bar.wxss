@@ -1,0 +1,25 @@
+/* components/custom-nav-bar/custom-nav-bar.wxss */
+.custom-nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.custom-nav-bar-left {
+    text-align: center;
+}
+
+.custom-nav-bar-left,
+.custom-nav-bar-right {
+    flex-shrink: 0;
+}
+
+.custom-nav-bar-center {
+    flex: 1;
+}

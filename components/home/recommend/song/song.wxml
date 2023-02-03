@@ -1,0 +1,37 @@
+<!--components/home/recommend/song/song.wxml-->
+<view class="songsWrap">
+    <view class="header">
+        <view class="title">推荐歌曲</view>
+        <view class="play" bindtap="play">
+            <text>播放</text>
+            <text class="iconfont icon-sanjiao"></text>
+        </view>
+    </view>
+    <view class="songs">
+        <swiper class="swiper" next-margin="60rpx">
+            <block wx:for="{{songList}}" wx:key="index">
+                <swiper-item class="swiper-item">
+                    <block wx:for="{{item}}" wx:key="id" wx:for-item="song">
+                        <view class="songItem" bindtap="playSong" data-song="{{song}}">
+                            <view class="cover">
+                                <image src="{{song.image}}" class="img"></image>
+                            </view>
+                            <view class="info">
+                                <view class="nameWrap">
+                                    <text class="name">{{song.song_name}}</text>
+                                </view>
+                                <view class="singerWrap">
+                                    {{song.author_name}}
+                                    <block wx:if="{{song.album_name}}">
+                                        <text> - </text>
+                                        <text>{{song.album_name}}</text>
+                                    </block>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</view>

@@ -1,21 +1,62 @@
 // pages/home/home.js
-const app = getApp()
+import {
+    getSheetList,
+    getSongList
+} from '../../api/index';
+const app = getApp();
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        navBarHeight: 0,
+        sheetList: [],
+        songList: []
     },
+    // --------------------- 请求 ---------------------
+    async getSheetListData() {
+        const result = await getSheetList()
+        if (result.status === 1) {
+            this.setData({
+                sheetList: result.data
+            })
+        }
+    },
+    async getSongListData() {
+        const result = await getSongList()
+        const data = result.data
+        // console.log(data);
+        const songList = []
+        let temList = []
+        for (let index = 0; index < data.length; index++) {
+            if(temList.length === 3) {
+                songList.push(temList)
+                temList = []
+                temList.push(data[index])
+            }else {
+                temList.push(data[index])
+            }
+            if(index === data.length - 1) {
+                songList.push(temList)
+            }
+        }
+        if (result.status === 1) {
+            this.setData({
+                songList: songList
+            })
+        }
+    },
+    // --------------------- 请求 ---------------------
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        getApp().watch('songInfo',this.watchBack);
-    },
-    watchBack(variate, method) {
-        console.log(variate, method,this);
+        this.getSheetListData()
+        this.getSongListData()
+        this.setData({
+            navBarHeight: app.globalData.navBarHeight
+        })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

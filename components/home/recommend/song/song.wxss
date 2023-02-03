@@ -1,0 +1,95 @@
+/* components/home/recommend/song/song.wxss */
+@import '/iconfont/iconfont.wxss';
+
+.songsWrap {
+    padding-bottom: 40rpx;
+}
+
+.header {
+    padding: 0 30rpx 30rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 36rpx;
+    font-weight: 700;
+}
+
+.play {
+    display: flex;
+    align-items: center;
+    padding: 12rpx 16rpx;
+    padding-left: 20rpx;
+    font-size: 24rpx;
+    line-height: 1;
+    color: #9a9a9a;
+    border: 1rpx solid rgba(0, 0, 0, .2);
+    border-radius: 30rpx;
+}
+
+.play .iconfont {
+    margin-left: 6rpx;
+    font-size: 24rpx;
+    color: #9a9a9a;
+}
+
+.songs {
+    height: 400rpx;
+}
+
+.swiper {
+    height: 100%;
+}
+
+.swiper-item {
+    margin-left: 30rpx;
+
+}
+
+.songItem {
+    display: flex;
+    margin-top: 20rpx;
+}
+
+.songItem:first-of-type {
+    margin-top: 0;
+}
+
+.cover {
+    flex-shrink: 0;
+    margin-right: 30rpx;
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.cover .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+
+.info {
+    padding-right: 60rpx;
+    flex: 1;
+    height: 120rpx;
+    overflow: hidden;
+}
+
+.nameWrap {
+    margin-top: 20rpx;
+    font-size: 28rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.singerWrap {
+    margin-top: 15rpx;
+    font-size: 24rpx;
+    color: #666666;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

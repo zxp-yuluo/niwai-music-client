@@ -46,7 +46,6 @@ Component({
      */
     lifetimes: {
         attached() {
-            console.log('渲染');
             const songInfo = app.globalData.songInfo
             const isPlay = app.globalData.isPlay
             this.setData({

@@ -1,0 +1,21 @@
+/* components/home/search/search.wxss */
+@import '/iconfont/iconfont.wxss';
+.search {
+    margin: 40rpx 30rpx 0 30rpx;
+    padding: 0 30rpx;
+    display: flex;
+    height: 70rpx;
+    color: #666;
+    background: #fff;
+    
+    border-radius: 30rpx;
+}
+.iconfont {
+    margin-right: 20rpx;
+    font-size: 38rpx;
+}
+.iconfont,
+.text {
+    height: 70rpx;
+    line-height: 70rpx;
+}

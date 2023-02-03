@@ -1,0 +1,25 @@
+<!--components/home/recommend/sheet/sheet.wxml-->
+<view class="sheet">
+    <view class="sheet-head">
+        <view class="sheet-head-left">
+            推荐歌单
+        </view>
+        <view class="sheet-head-right" bind:tap="goSheet">
+            <text>更多</text>
+            <text class="iconfont icon-show_danjiantoujiantou_shang-copy"></text>
+        </view>
+    </view>
+    <scroll-view class="sheet-body-wrap" scroll-x>
+        <view class="sheet-body">
+            <block wx:for="{{sheetList}}" wx:key="id">
+                <view class="sheet-info" bindtap="goSheetDetail" data-id="{{item.id}}">
+                    <view class="cover">
+                        <image class="image" src="{{item.cover}}" mode="widthFix" />
+                    </view>
+                    <view class="describe">{{item.describe}}</view>
+                </view>
+            </block>
+            <view class="temp">腻</view>
+        </view>
+    </scroll-view>
+</view>

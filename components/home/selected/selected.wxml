@@ -1,0 +1,35 @@
+<!--components/home/selected/selected.wxml-->
+<view class="selected">
+    <view class="selected-head">
+        腻歪
+    </view>
+    <view class="selected-body">
+        <view class="list">
+            <block wx:for="{{2}}" wx:key="index">
+                <view class="item" bindtap="playSelected">
+                    <view class="item-left">
+                        <view class="song">
+                            <text class="song-name">东风破</text>
+                            <text>-</text>
+                            <text class="singer">周杰伦</text>
+                        </view>
+                        <view class="song">
+                            <text class="song-name">烟花易冷</text>
+                            <text>-</text>
+                            <text class="singer">周杰伦</text>
+                        </view>
+                        <view class="song">
+                            <text class="song-name">红颜如霜</text>
+                            <text>-</text>
+                            <text class="singer">周杰伦</text>
+                        </view>
+                    </view>
+                    <view class="item-right">
+                        <image class="img-small" src="http://p2.music.126.net/aG5zqxkBRfLiV7A8W0iwgA==/109951166702962263.jpg?imageView&thumbnail=360y360&quality=75&tostatic=0"></image>
+                        <image class="img-large" src="http://p2.music.126.net/me6QV0CallEOlOP6Zb0b3w==/109951165770805050.jpg?imageView&thumbnail=360y360&quality=75&tostatic=0"></image>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

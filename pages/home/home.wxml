@@ -1,4 +1,10 @@
 <!--pages/home/home.wxml-->
-<view>
-    111
-</view>
+<scroll-view class="home" scroll-y>
+    <view style="height: {{navBarHeight + 'px'}};"></view>
+    <nw-home-navbar />
+    <nw-home-search />
+    <nw-home-sheet sheetList="{{sheetList}}" />
+    <nw-home-today />
+    <nw-home-song songList="{{songList}}" />
+    <nw-home-selected />
+</scroll-view>

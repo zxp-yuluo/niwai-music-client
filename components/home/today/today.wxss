@@ -1,0 +1,42 @@
+/* components/home/today/today.wxss */
+/* #5CF1E7 */
+.today {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 180rpx;
+    padding: 0 30rpx;
+}
+
+.day {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 60rpx;
+}
+
+.month {
+    padding-left: 15rpx;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24rpx;
+}
+
+.week {
+    padding-left: 30rpx;
+    font-weight: 600;
+}
+
+.weather {
+    font-weight: 600;
+}
+
+.temperature {
+    padding-left: 30rpx;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50rpx;
+}
+
+.unit {
+    padding-left: 6rpx;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 24rpx;
+    font-weight: 500;
+}

@@ -1,0 +1,5 @@
+<!--components/home/search/search.wxml-->
+<view class="search" bind:tap="goSearch">
+    <text class="iconfont icon-search"></text>
+    <text class="text">搜索歌曲</text>
+</view>

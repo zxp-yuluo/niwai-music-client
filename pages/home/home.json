@@ -1,3 +1,11 @@
 {
-    "usingComponents": {}
+    "usingComponents": {
+        "nw-home-navbar": "/components/home/navbar/navbar",
+        "nw-home-search": "/components/home/search/search",
+        "nw-home-sheet": "/components/home/recommend/sheet/sheet",
+        "nw-home-today": "/components/home/today/today",
+        "nw-home-song": "/components/home/recommend/song/song",
+        "nw-home-selected": "/components/home/selected/selected"
+    },
+    "navigationStyle": "custom"
 }

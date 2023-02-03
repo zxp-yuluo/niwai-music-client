@@ -3,7 +3,10 @@
         "pages/guidance/guidance",
         "pages/home/home",
         "pages/profile/profile",
-        "pages/player/player"
+        "pages/player/player",
+        "pages/search/search",
+        "pages/sheet/sheet",
+        "pages/sheet_detail/sheet_detail"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -16,7 +19,8 @@
         "color": "#000000",
         "selectedColor": "#000000",
         "backgroundColor": "#000000",
-        "list": [{
+        "list": [
+            {
                 "pagePath": "pages/home/home",
                 "iconPath": "/assess/images/tabbar/home.png",
                 "selectedIconPath": "/assess/images/tabbar/home-active.png",
@@ -30,7 +34,6 @@
             }
         ]
     },
-    "lazyCodeLoading":"requiredComponents",
     "style": "v2",
     "sitemapLocation": "sitemap.json"
 }

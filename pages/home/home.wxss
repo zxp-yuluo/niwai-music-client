@@ -1,1 +1,6 @@
 /* pages/home/home.wxss */
+.home {
+    height: 100%;
+    padding-bottom: 100rpx;
+    box-sizing: border-box;
+  }

@@ -1,0 +1,58 @@
+/* components/home/selected/selected.wxss */
+.selected {
+    padding: 10rpx 30rpx 60rpx 30rpx;
+}
+
+.selected-head {
+    padding-bottom: 30rpx;
+    font-size: 36rpx;
+    font-weight: 700;
+}
+
+.item {
+    margin-bottom: 30rpx;
+    padding: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    border-radius: 20rpx;
+    background: #fff;
+  }
+.item-left {
+    padding-right: 30rpx;
+    flex: 1;
+    overflow: hidden;
+}
+.song {
+    width: 100%;
+    line-height: 56rpx;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.singer {
+    font-size: 24rpx;
+}
+.item-right {
+    flex-shrink: 0;
+    position: relative;
+    width: 140rpx;
+    overflow: hidden;
+}
+.img-small {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 126rpx;
+    height: 126rpx;
+}
+
+.img-large {
+    position: absolute;
+    right: -60rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160rpx;
+    height: 160rpx;
+}
