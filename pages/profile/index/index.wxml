@@ -1,0 +1,7 @@
+<!--pages/profile/index/index.wxml-->
+<scroll-view class="profile" scroll-y>
+    <view style="height: {{navBarHeight + 'px'}};"></view>
+    <nw-profile-navbar />
+    <nw-profile-info />
+    <nw-profile-operate />
+</scroll-view>

@@ -1,0 +1,125 @@
+/* components/profile/sheet/tabs/tabs.wxss */
+@import '/iconfont/iconfont.wxss';
+
+.sheet-tabs-head {
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 90rpx;
+    background: #fafafa;
+}
+
+.sheet-tabs-item {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 60rpx;
+    height: 8rpx;
+    background: #ed9063;
+    border-radius: 8rpx;
+}
+
+.sheet-tabs-item .iconfont {
+    margin-left: 16rpx;
+    font-size: 32rpx;
+}
+
+.sheet-tabs-body {
+    margin: 30rpx;
+    padding: 30rpx;
+    color: #999999;
+    background: #fff;
+}
+
+.sheet-tabs-body-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24rpx;
+}
+
+.body-head-left {
+    display: flex;
+    align-items: center;
+}
+
+.body-head-left .iconfont {
+    padding: 30rpx;
+    font-size: 24rpx;
+}
+
+.icon-add.iconfont {
+    padding-right: 15rpx;
+}
+
+.icon-ashbin.iconfont {
+    padding-left: 15rpx;
+}
+
+.sheet-tabs-body-item {
+    margin-top: 30rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sheet-item-left {
+    margin-right: 30rpx;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.sheet-cover-wrap {
+    flex-shrink: 0;
+}
+
+.sheet-info {
+    flex: 1;
+    overflow: hidden;
+}
+
+.sheet-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sheet-cover-wrap {
+    margin-right: 16rpx;
+    width: 130rpx;
+    height: 130rpx;
+}
+
+.sheet-cover {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 8rpx;
+}
+
+.sheet-info {
+    font-size: 24rpx;
+}
+
+.sheet-item-right {
+    flex-shrink: 0;
+}
+
+.sheet-item-right .iconfont {
+    padding: 0 30rpx 10rpx 10rpx;
+}
+
+.tips {
+    padding: 30rpx 0;
+    font-size: 24rpx;
+    text-align: center;
+}

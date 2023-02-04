@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "nw-profile-navbar": "/components/profile/index/navbar/navbar",
+        "nw-profile-info": "/components/profile/index/info/info",
+        "nw-profile-operate": "/components/profile/index/operate/operate"
+    },
+    "navigationStyle": "custom"
+}

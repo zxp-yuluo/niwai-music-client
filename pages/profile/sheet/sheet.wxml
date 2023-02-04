@@ -1,0 +1,6 @@
+<!--pages/profile/sheet/sheet.wxml-->
+<scroll-view class="profile-sheet" scroll-y>
+    <view style="height: {{navBarHeight + 'px'}};"></view>
+    <nw-sheet-navbar />
+    <nw-sheet-tabs />
+</scroll-view>

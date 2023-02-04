@@ -1,0 +1,31 @@
+<!--pages/sheet/add/add.wxml-->
+<scroll-view class="add" scroll-y>
+    <view style="height: {{navBarHeight + 'px'}};"></view>
+    <nw-sheet-add-navbar />
+    <view class="form">
+        <label for="name" class="label">
+            <text>名字：</text>
+            <input id='name' value="{{name}}"  confirm-type="done" data-attribute="name" bindinput="inputChange" type="text" placeholder-style="font-size: 28rpx;" placeholder="请输入歌单名称" />
+        </label>
+        <label for="describe" class="label">
+            <text>描述：</text>
+            <input id='describe' value="{{describe}}" data-attribute="describe" bindinput="inputChange" confirm-type="done" type="text" placeholder-style="font-size: 28rpx;" placeholder="请输入歌单描述" />
+        </label>
+        <view class="upload">
+            <view class="text">上传图片：</view>
+            <block wx:if="{{cover}}">
+                <view class="upload-right preview">
+                    <view class="operate">
+                        <view bindtap="previewImage" class="iconfont icon-browse"></view>
+                        <view bindtap="deleteImage" class="iconfont icon-ashbin"></view>
+                    </view>
+                    <image class="upload-image" src="{{cover}}" mode="widthFix" />
+                </view>
+            </block>
+            <view class="upload-right" bindtap="upload">
+                + upload
+            </view>
+        </view>
+        <button bindtap="submit" class="addBtn">添加</button>
+    </view>
+</scroll-view>

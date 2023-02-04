@@ -1,0 +1,50 @@
+<!--components/profile/sheet/tabs/tabs.wxml-->
+<view class="sheet-tabs">
+    <view style="height: 90rpx;"></view>
+    <view class="sheet-tabs-head" style="top: {{navBarHeight + 'px'}}">
+        <view class="sheet-tabs-item {{selected=== '0'?'selected':''}}" data-select="0" bindtap="tabs">
+            <view>创建</view>
+            <view class="iconfont icon-folder-close"></view>
+        </view>
+        <view class="sheet-tabs-item {{selected=== '1'?'selected':''}}" data-select="1" bindtap="tabs">
+            <view>收藏</view>
+            <view class="iconfont icon-file-open"></view>
+        </view>
+    </view>
+    <view class="sheet-tabs-body">
+        <view class="sheet-tabs-body-head">
+            <view class="body-head-left">
+                {{selected==='1'?"收藏":"创建"}}歌单(3个)
+            </view>
+            <view class="body-head-left">
+                <view bindtap="addSheet" wx:if="{{selected==='0'}}" class="iconfont icon-add"></view>
+                <view bindtap="delete" class="iconfont icon-ashbin"></view>
+            </view>
+        </view>
+        <view class="sheet-tabs-body-list">
+            <block wx:if="{{true}}">
+                <block wx:for="{{2}}" wx:key="index">
+                    <view class="sheet-tabs-body-item">
+                        <view bindtap="goSheetDetail" data-info="index" class="sheet-item-left">
+                            <view class="sheet-cover-wrap">
+                                <image class="sheet-cover" src="http://139.196.78.237:5000/image/niwaiyinyue_0f61c554-0e0a-4a28-94e6-e86b4c130ff7.png" mode="widthFix" />
+                            </view>
+                            <view class="sheet-info">
+                                <view class="sheet-name">经典翻唱</view>
+                                <view class="sheet-song-number">10首</view>
+                            </view>
+                        </view>
+                        <view class="sheet-item-right">
+                            <view bindtap="operate" data-info="index" class=" iconfont icon-elipsis"></view>
+                        </view>
+                    </view>
+                </block>
+            </block>
+            <block wx:else>
+                <view class="tips">
+                    {{selected === '0' ? '暂为创建歌单': '暂无收藏歌单'}}
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

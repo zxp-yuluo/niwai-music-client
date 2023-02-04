@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "nw-sheet-navbar": "/components/profile/sheet/navbar/navbar",
+        "nw-sheet-tabs": "/components/profile/sheet/tabs/tabs"
+    },
+    "navigationStyle": "custom"
+}

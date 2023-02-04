@@ -1,0 +1,63 @@
+/* pages/sheet/add/add.wxss */
+@import '/iconfont/iconfont.wxss';
+.add {
+    height: 100%;
+    padding-bottom: 100rpx;
+    box-sizing: border-box;
+}
+.form {
+    margin: 30rpx;
+    padding: 60rpx 30rpx;
+    background: #fff;
+}
+.label {
+    display: flex;
+    align-items: center;
+    height: 120rpx;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
+}
+.upload {
+    margin-top: 30rpx;
+    display: flex;
+}
+#describe,
+#name {
+    margin-left: 30rpx;
+}
+.text {
+    margin-right: 30rpx;   
+}
+.upload-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150rpx;
+    height: 150rpx;
+    font-size: 20rpx;
+    color: #666;
+    background: #eee;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.preview {
+    position: relative;
+    margin-right: 30rpx;
+}
+.operate {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.operate .iconfont {
+    padding: 10rpx;
+}
+
+.upload-image {
+    width: 150rpx;
+    height: 150rpx;
+}
+.addBtn {
+    width: 100%;
+    margin-top: 88rpx;
+}

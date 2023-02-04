@@ -1,0 +1,21 @@
+<!--components/profile/operate/operate.wxml-->
+<view class="operate">
+    <view class="operate-item" bindtap="jump" data-operate="collect">
+        <view class="operate-item-left">
+            <view class="iconfont icon-aixin"></view>
+            <view>
+                我的收藏
+            </view>
+        </view>
+        <view class="iconfont icon-show_danjiantoujiantou_shang-copy"></view>
+    </view>
+    <view class="operate-item" bindtap="jump" data-operate="sheet">
+        <view class="operate-item-left">
+            <view class="iconfont icon-menu"></view>
+            <view>
+                我的歌单
+            </view>
+        </view>
+        <view class="iconfont icon-show_danjiantoujiantou_shang-copy"></view>
+    </view>
+</view>

@@ -24,14 +24,14 @@ Component({
         // 跳转歌单页面
         goSheet() {
             wx.navigateTo({
-                url: '/pages/sheet/sheet',
+                url: '/pages/sheet/index/index',
             })
         },
         // 跳转歌单详情页面
         goSheetDetail(e) {
             const id = e.currentTarget.dataset.id
             wx.navigateTo({
-                url: '/pages/sheet_detail/sheet_detail?id=' + id,
+                url: '/pages/sheet/detail/detail?id=' + id,
             })
         }
     },

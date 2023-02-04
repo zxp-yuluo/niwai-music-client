@@ -2,13 +2,13 @@
 <view class="custom-nav-bar" style="height:{{navBarHeight + 'px'}};padding: 0 {{menuRight + 'px'}};background-color: {{backgroundColor}};">
     <view style="height:{{statusBarHeight + 'px'}}"></view>
     <view class="content" style="line-height:{{contentHeight + 'px'}}">
-        <view class="custom-nav-bar-left" style="width: {{menuWidth + 'px'}};">
+        <view class="custom-nav-bar-left" style="width: {{menuWidth + 'px'}};height: {{menuHeight+'px'}};">
         <slot name="left"></slot>
     </view>
     <view class="custom-nav-bar-center" style="margin: 0 {{menuRight + 'px'}};">
         <slot name="center"></slot>
     </view>
-    <view class="custom-nav-bar-right" style="width: {{menuWidth + 'px'}}">
+    <view class="custom-nav-bar-right" style="width: {{menuWidth + 'px'}};height: {{menuHeight+'px'}};">
         <slot name="right"></slot>
     </view>
     </view>

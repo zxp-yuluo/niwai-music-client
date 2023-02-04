@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "nw-sheet-add-navbar": "/components/sheet/add/navbar/navbar"
+    },
+    "navigationStyle": "custom"
+}

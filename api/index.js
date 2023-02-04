@@ -9,3 +9,16 @@ export const getSheetList = () => nwQuery({
 export const getSongList = () => nwQuery({
     url: '/songs/recommend'
 })
+
+// 添加歌单
+export const addSongSheet = data => nwQuery({
+    url: '/sheets',
+    method: 'POST',
+    data
+})
+
+// 删除图片
+export const deleteImage = name => nwQuery({
+    method: 'DELETE',
+    url: '/upload/picture/' + name
+})

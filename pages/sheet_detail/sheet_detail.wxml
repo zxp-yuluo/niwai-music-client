@@ -1,2 +1,0 @@
-<!--pages/sheet_detail/sheet_detail.wxml-->
-<text>歌单id：{{id}}</text>

@@ -1,0 +1,23 @@
+/* components/profile/operate/operate.wxss */
+@import '/iconfont/iconfont.wxss';
+.operate {
+    padding: 0 30rpx;
+}
+.operate-item {
+    padding: 30rpx;
+    margin-top: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    line-height: 50rpx;
+    background: #ffffff;
+    border-radius: 10rpx;
+}
+.operate-item .icon-menu,
+.operate-item .icon-aixin {
+    padding-right: 30rpx;
+    font-size: 36rpx;
+}
+.operate-item-left {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,5 @@
+/* components/profile/navbar/navbar.wxss */
+.title {
+    text-align: center;
+    font-size: 38rpx;
+}

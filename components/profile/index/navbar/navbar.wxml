@@ -1,0 +1,4 @@
+<!--components/profile/navbar/navbar.wxml-->
+<nw-navbar backgroundColor="#fafafa">
+    <view slot="center" class="title">我的</view>
+</nw-navbar>

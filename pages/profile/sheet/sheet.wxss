@@ -1,0 +1,4 @@
+/* pages/profile/sheet/sheet.wxss */
+.profile-sheet {
+    height: 100%;
+}

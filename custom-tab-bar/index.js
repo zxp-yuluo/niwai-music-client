@@ -32,7 +32,7 @@ Component({
                 "isSpecial": true
             },
             {
-                "pagePath": "/pages/profile/profile",
+                "pagePath": "/pages/profile/index/index",
                 "iconPath": "/assess/images/tabbar/profile.png",
                 "selectedIconPath": "/assess/images/tabbar/profile-active.png",
                 "text": "我的",

@@ -1,0 +1,33 @@
+/* components/sheet/add/navbar/navbar.wxss */
+@import '/iconfont/iconfont.wxss';
+.sheet-nav-left {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    border: 1rpx solid #d1d1d1;
+    border-radius: 32rpx;
+    box-sizing: border-box;
+}
+
+.sheet-nav-left .iconfont {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.icon-shangdian-copy::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    height: 30rpx;
+    width: 1rpx;
+    background: rgba(0,0,0,0.5);
+}
+
+.title {
+    text-align: center;
+    font-size: 38rpx;
+}

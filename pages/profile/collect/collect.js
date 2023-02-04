@@ -1,5 +1,4 @@
-// pages/profile/profile.js
-const app = getApp()
+// pages/profile/collect/collect.js
 Page({
 
     /**
@@ -8,18 +7,14 @@ Page({
     data: {
 
     },
+
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
 
     },
-    click() {
-        const isPlay = this.getTabBar().data.isPlay
-        this.getTabBar().setData({
-            isPlay: !isPlay
-        });
-    },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -31,12 +26,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-        if (typeof this.getTabBar === 'function' &&
-            this.getTabBar()) {
-            this.getTabBar().setData({
-                selected: 2
-            })
-        }
+
     },
 
     /**
