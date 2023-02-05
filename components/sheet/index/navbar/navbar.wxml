@@ -1,0 +1,8 @@
+<!--components/sheet/index/navbar/navbar.wxml-->
+<nw-navbar>
+    <view slot="left" class="sheet-nav-left">
+        <view bindtap="goBack" class="iconfont icon-show_danjiantoujiantou_shang-copy1"></view>
+        <view bindtap="goHome" class="iconfont icon-shangdian-copy"></view>
+    </view>
+    <view slot="center" class="title">歌单广场</view>
+</nw-navbar>

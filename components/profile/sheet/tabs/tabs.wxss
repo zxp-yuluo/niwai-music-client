@@ -44,7 +44,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 24rpx;
+    font-size: 28rpx;
 }
 
 .body-head-left {
@@ -54,7 +54,7 @@
 
 .body-head-left .iconfont {
     padding: 30rpx;
-    font-size: 24rpx;
+    font-size: 32rpx;
 }
 
 .icon-add.iconfont {

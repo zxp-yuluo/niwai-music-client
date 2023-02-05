@@ -1,1 +1,6 @@
 /* pages/sheet/index/index.wxss */
+.sheet-index {
+    height: 100%;
+    padding-bottom: 100rpx;
+    box-sizing: border-box;
+}
