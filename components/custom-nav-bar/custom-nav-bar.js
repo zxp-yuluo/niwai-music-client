@@ -10,7 +10,7 @@ Component({
     properties: {
         backgroundColor: {
             type: String,
-            value: '#fff'
+            value: '#F6F7FB'
         }
     },
 

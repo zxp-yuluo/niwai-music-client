@@ -1,2 +1,7 @@
 <!--pages/player/player.wxml-->
-<text>pages/player/player.wxml</text>
+    <scroll-view class="player">
+        <view style="height: {{navBarHeight + 'px'}};"></view>
+        <nw-player-navbar songInfo="{{songInfo}}" />
+        <nw-player-info songInfo="{{songInfo}}" />
+        
+    </scroll-view>

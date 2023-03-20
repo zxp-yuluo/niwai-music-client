@@ -1,0 +1,60 @@
+/* components/player/navbar/navbar.wxss */
+@import '/iconfont/iconfont.wxss';
+
+.sheet-nav-left {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    border: 1rpx solid #d1d1d1;
+    border-radius: 32rpx;
+    box-sizing: border-box;
+}
+
+.sheet-nav-right {
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.sheet-nav-left .iconfont {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* color: #fff; */
+}
+
+.icon-shangdian-copy::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    height: 30rpx;
+    width: 1rpx;
+    background: rgb(0, 0, 0);
+}
+
+.title {
+    text-align: center;
+    font-size: 32rpx;
+    white-space: nowrap;
+    /* color: #fff; */
+}
+
+@keyframes songNameRotate {
+    from {
+        transform: translateX(342rpx);
+    }
+
+    to {
+        transform: translateX(-342rpx);
+    }
+}
+
+.title {
+    animation-name: songNameRotate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}

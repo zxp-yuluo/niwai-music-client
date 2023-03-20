@@ -1,6 +1,6 @@
 page {
     height: 100%;
-    background: #fafafa;
+    background: #F6F7FB;
 }
 image {
     vertical-align: middle;

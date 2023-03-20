@@ -1,67 +1,34 @@
 // pages/sheet/index/index.js
 const app = getApp()
+import {
+    getAllSheetList
+} from '../../../api/index.js';
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
         navBarHeight: 0,
+        sheetList: []
     },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
+    // ----------- 网络请求 -----------
+    async getAllSheetListData() {
+        const result = await getAllSheetList()
+        if(result.status === 1) {
+            console.log(result);
+            this.setData({
+                sheetList: result.data
+            })
+        }
+    },
     onLoad(options) {
-
+        this.getAllSheetListData()
+        this.setData({
+            navBarHeight: app.globalData.navBarHeight
+        })
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
+    // 歌单详情
+    goDetail(e) {
+        const {id} = e.currentTarget.dataset.info
+        wx.navigateTo({
+          url: '/pages/sheet/detail/detail?id=' + id,
+        })
     }
 })

@@ -22,4 +22,5 @@
 
 .custom-nav-bar-center {
     flex: 1;
+    overflow: hidden;
 }

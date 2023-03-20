@@ -45,8 +45,8 @@ App({
         menuWidth: 0, // 胶囊宽度
         songInfo: { // 播放歌曲的信息
             image: 'http://139.196.78.237:5000/image/default_song.png', //歌曲图片
-            // image: 'http://139.196.78.237:5000/image/niwaiyinyue_0f61c554-0e0a-4a28-94e6-e86b4c130ff7.png', //歌曲图片
         },
-        isPlay: true, // 是否正在播放
+        image: "http://139.196.78.237:5000/image/default_song.png",
+        isPlay: false, // 是否正在播放
     }
 })

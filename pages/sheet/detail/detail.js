@@ -1,20 +1,38 @@
 // pages/sheet/detail/detail.js
+const app = getApp();
+import {
+    getSheetInfoById
+} from '../../../api/index.js'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        id: '',
+        navBarHeight: 0
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        const id = options.id
+        this.setData({
+            id,
+            navBarHeight: app.globalData.navBarHeight
+        })
+        this.getSheetInfoByIdData(id)
     },
-
+    async getSheetInfoByIdData(id) {
+        const result = await getSheetInfoById(id)
+        if(result.status === 1) {
+            console.log(result);
+            this.setData({
+                sheetList: result.data
+            })
+        }
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

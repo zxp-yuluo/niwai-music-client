@@ -1,3 +1,7 @@
 {
-    "usingComponents": {}
+    "usingComponents": {
+        "nw-player-navbar": "/components/player/navbar/navbar",
+        "nw-player-info": "/components/player/info/info"
+    },
+    "navigationStyle": "custom"
 }

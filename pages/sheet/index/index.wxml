@@ -2,5 +2,12 @@
 <scroll-view class="sheet-index" scroll-y>
     <view style="height: {{navBarHeight + 'px'}};"></view>
     <nw-sheet-index-navbar />
-    <nw-sheet-index-swiper />
-</scroll-view>>
+    <view class="sheet-index-list">
+        <block wx:for="{{sheetList}}" wx:key="id">
+            <view class="list-item" data-info="{{item}}" bindtap="goDetail">
+                <image class="item-image" mode="widthFix" src="{{item.cover}}" />
+                <view class="item-name">{{item.name}}</view>
+            </view>
+        </block>
+    </view>
+</scroll-view>

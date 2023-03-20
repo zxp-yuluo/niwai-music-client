@@ -17,6 +17,7 @@ Component({
         selectedColor: "#ed9063",
         songInfo: null,
         isPlay: false,
+        image: '',
         "list": [{
                 "pagePath": "/pages/home/home",
                 "iconPath": "/assess/images/tabbar/home.png",
@@ -46,11 +47,13 @@ Component({
      */
     lifetimes: {
         attached() {
-            const songInfo = app.globalData.songInfo
+            const image = app.globalData.image
             const isPlay = app.globalData.isPlay
             this.setData({
-                songInfo,
+                image,
                 isPlay
+            },() => {
+                console.log(this.data.image,this.data.isPlay);
             })
         }
     },

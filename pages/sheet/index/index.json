@@ -1,7 +1,6 @@
 {
     "usingComponents": {
-        "nw-sheet-index-navbar": "/components/sheet/index/navbar/navbar",
-        "nw-sheet-index-swiper": "/components/sheet/index/swiper/swiper"
+        "nw-sheet-index-navbar": "/components/sheet/index/navbar/navbar"
     },
     "navigationStyle": "custom"
 }

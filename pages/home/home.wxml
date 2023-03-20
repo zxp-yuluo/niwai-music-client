@@ -6,5 +6,5 @@
     <nw-home-sheet sheetList="{{sheetList}}" />
     <nw-home-today />
     <nw-home-song songList="{{songList}}" />
-    <nw-home-selected />
+    <!-- <nw-home-selected /> -->
 </scroll-view>

@@ -1,2 +1,4 @@
 <!--pages/sheet/detail/detail.wxml-->
-<text>pages/sheet/detail/detail.wxml</text>
+<scroll-view class="sheet-detail" scroll-y>
+    {{id}}
+</scroll-view>

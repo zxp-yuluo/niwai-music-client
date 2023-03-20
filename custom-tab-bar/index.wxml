@@ -2,9 +2,8 @@
 
 <view class="tab-bar" style='height:{{100}}rpx;'>
     <view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
-    <image wx:if="{{item.isSpecial != null && item.isSpecial == true}}" src="{{songInfo.image}}" class='centerImage imageRotate {{isPlay?"start":"stop"}}'></image>
-    <image wx:else class='cover-image' src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
-    <view class="coverStyle" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
-  </view>  
+        <image wx:if="{{item.isSpecial != null && item.isSpecial == true}}" src="{{image}}" class='centerImage imageRotate {{isPlay?"start":"stop"}}'></image>
+        <image wx:else class='cover-image' src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
+        <view class="coverStyle" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
+    </view>
 </view>
-

@@ -42,6 +42,13 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "播放页面",
+                    "pathName": "pages/player/player",
+                    "query": "id=19",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }

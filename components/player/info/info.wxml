@@ -1,0 +1,46 @@
+<!--components/player/info/info.wxml-->
+<view class="info">
+    <swiper class="info-swiper">
+        <swiper-item class="cover-wrap">
+            <view class="ngi">
+                <image class="cover" src="{{songInfo.image}}" mode="widthFix" />
+                <view class="iconfont icon-sanjiao"></view>
+            </view>
+        </swiper-item>
+        <swiper-item class="lyrics">
+            <scroll-view scroll-y class="scroll-view">
+                <block wx:if="{{songInfo.lyrics}}">
+                    <block wx:for="{{songInfo.lyrics}}" wx:key="item">
+                        <view class="row">{{item}}</view>
+                    </block>
+                </block>
+                <block wx:else>
+                    <view class="nodata">
+                        暂无歌词
+                    </view>
+                </block>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+    <view class="control">
+        <view class="progress">
+            <view class="time current">
+                00:00:00
+            </view>
+            <progress class="jindu" percent="50" border-radius="10" stroke-width="3" color="#ed9063"></progress>
+            <view class="time total">
+                05:20:00
+            </view>
+        </view>
+        <view class="operation">
+            <view class="play-model iconfont icon-liebiaoxunhuan"></view>
+            <!-- <view class="play-model iconfont"></view>
+            <view class="play-model iconfont"></view> -->
+            <view class="previous iconfont icon-xiayigexiayishou-copy"></view>
+            <view class="play-pause iconfont icon-Play"></view>
+            <!-- <view class="play-pause iconfont icon-Pause"></view> -->
+            <view class="next iconfont icon-xiayigexiayishou"></view>
+            <view class="list iconfont icon-menu"></view>
+        </view>
+    </view>
+</view>

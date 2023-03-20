@@ -58,7 +58,7 @@ Page({
     // 跳转页面
     handleSkip() {
         clearTimeout(this.setTimeoutId)
-        wx.redirectTo({
+        wx.switchTab({
             url: '/pages/home/home',
         })
     }

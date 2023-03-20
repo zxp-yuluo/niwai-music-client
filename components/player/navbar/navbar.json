@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "nw-navbar": "/components/custom-nav-bar/custom-nav-bar"
+    }
+}

@@ -1,0 +1,84 @@
+/* components/player/info/info.wxss */
+@import '/iconfont/iconfont.wxss';
+.info {
+    height: 100%;
+    /* background: gold; */
+}
+
+.info-swiper {
+    height: 70%;
+}
+.cover-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ngi {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500rpx;
+    height: 500rpx;
+    background: url("http://localhost:5000/image/bgi.png") no-repeat;
+    background-size: cover;
+    
+}
+.ngi .iconfont {
+    position: absolute;
+    font-size: 100rpx;
+    color: rgba(246,247,251, 0.8);
+}
+.cover {
+    width: 320rpx;
+    height: 320rpx;
+    border-radius: 50%;
+}
+
+.scroll-view {
+    height: 100%;
+}
+.row {
+    line-height: 64rpx;
+    text-align: center;
+    font-size: 28rpx;
+}
+.nodata {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100%;
+}
+.progress {
+    padding: 30rpx;
+    display: flex;
+    font-size: 28rpx;
+}
+.time {
+    flex-shrink: 0;
+    width: 120rpx;
+    /* color: #ed9063; */
+}
+.total {
+    text-align: right;
+}
+.jindu {
+    flex: 1;
+}
+
+.operation {
+    padding: 30rpx;
+    display: flex;
+    align-items: center;
+}
+.operation .iconfont {
+    flex: 1;
+    font-size: 50rpx;
+    height: 100%;
+    text-align: center;
+    color: #000;
+}
+.operation .iconfont.play-pause {
+    font-size: 100rpx;
+}

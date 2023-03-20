@@ -33,6 +33,11 @@ Component({
         playSong(e) {
             const songInfo = e.currentTarget.dataset.song
             getApp().globalData.songInfo = songInfo
+            getApp().globalData.image = songInfo.image
+            getApp().globalData.isPlay = true
+            wx.navigateTo({
+              url: '/pages/player/player?id=' + songInfo.id,
+            })
         }
     }
 })
