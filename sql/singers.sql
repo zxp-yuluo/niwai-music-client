@@ -1,0 +1,1 @@
+INSERT INTO `singers` (`id`, `singer`, `create_time`, `avatar`, `create_author`) VALUES (32, '周杰伦', '2023-01-31 14:04:48', 'http://localhost:5000/image/niwaiyinyue_5d1a665c-f4e8-4afa-8f7a-9620f2aec230.jpg', '腻歪音乐');

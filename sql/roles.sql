@@ -1,0 +1,2 @@
+INSERT INTO `roles` (`id`, `role_name`, `create_time`, `auth_time`, `auth_name`, `menus`) VALUES (1, '管理员', '2023-01-22 21:28:48', '2023-01-22 21:29:47', '腻歪音乐', '[\"top\",\"home\",\"sheet\",\"song\",\"singer\",\"album\",\"manage\",\"role\"]');
+INSERT INTO `roles` (`id`, `role_name`, `create_time`, `auth_time`, `auth_name`, `menus`) VALUES (2, '成员', '2023-01-22 21:28:55', '2023-01-22 21:29:43', '腻歪音乐', '[\"home\",\"sheet\",\"song\",\"singer\",\"album\"]');
