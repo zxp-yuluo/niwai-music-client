@@ -1,0 +1,15 @@
+function formatDate(tiem) {
+    // time 单位秒
+    var minute = Math.floor(tiem/60)
+    var second = Math.floor(tiem%60)
+    return padleftZero(minute) + ':' + padleftZero(second)
+}
+
+function padleftZero(time) {
+    time += ''
+    return ("00" + time).slice(time.length)
+}
+
+module.exports = {
+    formatDate: formatDate
+}

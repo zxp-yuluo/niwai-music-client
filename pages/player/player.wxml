@@ -2,6 +2,19 @@
     <scroll-view class="player">
         <view style="height: {{navBarHeight + 'px'}};"></view>
         <nw-player-navbar songInfo="{{songInfo}}" />
-        <nw-player-info songInfo="{{songInfo}}" />
-        
+        <nw-player-info
+            songInfo="{{songInfo}}"
+            songTime="{{songTime}}"
+            lyrics="{{lyrics}}"
+            rowHeight="{{rowHeight}}"
+            currentTime="{{currentTime}}"
+            percent="{{percent}}"
+            isPlay="{{isPlay}}"
+            scrollHeight="{{scrollHeight}}"
+            currentLyricsIndex="{{currentLyricsIndex}}"
+            bind:playAndPauseClick="playOrPauseClick"
+            bind:handleSliderChange="handleSliderChange"
+            bind:handleSliderChanging="handleSliderChanging"
+            bind:scrolltolower="scrolltolower"
+        />
     </scroll-view>

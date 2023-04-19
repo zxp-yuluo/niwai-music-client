@@ -49,9 +49,16 @@
                     "query": "id=19",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "歌单详情",
+                    "pathName": "pages/sheet/detail/detail",
+                    "query": "id=40",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }
     },
-    "libVersion": "2.23.4"
+    "libVersion": "2.28.1"
 }

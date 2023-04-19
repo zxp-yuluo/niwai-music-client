@@ -1,0 +1,44 @@
+<!--components/sheet/detail/info/info.wxml-->
+<view class="sheet-detail">
+    <view class="bg-image-wrap">
+        <view class="detail-info-wrap">
+            <view class="detail-info">
+                <view class="detail-info-left">
+                    <image class="sheet-cover" mode="widthFix" src="{{sheetList.cover}}" />
+                </view>
+                <view class="detail-info-right">
+                    <view class="sheet-name">
+                        {{sheetList.name}}
+                    </view>
+                    <view class="sheet-author">
+                        <image wx:if="{{sheetList.author_avatar}}" class="author-avatar" src="http://localhost:5000/image/niwaiyinyue_9c26465f-e008-4cb6-9f63-5cdabc9d1ab1.jpg" mode="widthFix" />
+                        <view class="author-name">
+                            {{sheetList.create_author}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="detail-info-describe" bindtap="showSheetInfoClick">
+                <view class="describe-text">
+                    {{sheetList.describe}}
+                </view>
+                <view class="iconfont icon-show_danjiantoujiantou_shang-copy"></view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<page-container class="page-container" show="{{show}}" overlay="{{false}}" position="center" custom-style="{{customStyle}}">
+    <scroll-view scroll-y class="show-sheet-info">
+        <view class="delete-show" style="top: {{navBarHeight}}px;" bindtap="hideSheetInfoClick">
+            <text class="iconfont icon-chahao"></text>
+        </view>
+        <view class="show-sheet-placeholder" style="padding-top: {{navBarHeight}}px;"></view>
+        <image class="show-sheet-image" src="{{sheetList.cover}}" mode="widthFix" />
+        <view class="show-sheet-name">{{sheetList.name}}</view>
+        <view class="show-sheet-line"></view>
+        <view class="show-sheet-describe">{{sheetList.describe}}</view>
+    </scroll-view>
+    <view class="show-sheet-info-bg" style="background-image: url('{{sheetList.cover}}');"></view>
+    <view class="show-sheet-info-grey"></view>
+</page-container>

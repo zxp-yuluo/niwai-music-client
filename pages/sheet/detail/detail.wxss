@@ -1,1 +1,28 @@
 /* pages/sheet/detail/detail.wxss */
+.bg-image-wrap {
+    position: relative;
+    height: 100%;
+}
+.bg-image,
+.bg-grey {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.bg-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(100px);
+}
+.bg-grey {
+    background: rgba(0, 0, 0, 0.2);
+}
+.sheet-detail {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+}
+

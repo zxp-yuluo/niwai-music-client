@@ -1,3 +1,8 @@
 {
-    "usingComponents": {}
+    "usingComponents": {
+        "nw-sheet-detail-navbar": "/components/sheet/detail/navbar/navbar",
+        "nw-sheet-detail-info": "/components/sheet/detail/info/info",
+        "nw-sheet-detail-list": "/components/sheet/detail/list/list"
+    },
+    "navigationStyle": "custom"
 }

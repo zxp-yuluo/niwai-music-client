@@ -1,17 +1,26 @@
 <!--components/player/info/info.wxml-->
+<wxs src="../../../wxs/format.wxs" module="format" />
 <view class="info">
     <swiper class="info-swiper">
         <swiper-item class="cover-wrap">
-            <view class="ngi">
-                <image class="cover" src="{{songInfo.image}}" mode="widthFix" />
-                <view class="iconfont icon-sanjiao"></view>
+            <view class="ngi" bindtap="playPauseClick" >
+                <block wx:if="{{songInfo.image}}">
+                    <image class="cover coverRotate {{isPlay ? 'start' : 'stop'}}" src="{{songInfo.image}}" mode="widthFix" />
+                </block>
+                <block wx:else>
+                    <image class="cover" src="http://139.196.78.237:5000/image/default_song.png" mode="widthFix" />
+                </block>
+                <block wx:if="{{!isPlay}}">
+                    <view class="iconfont icon-sanjiao"></view>
+                </block>
             </view>
         </swiper-item>
         <swiper-item class="lyrics">
-            <scroll-view scroll-y class="scroll-view">
-                <block wx:if="{{songInfo.lyrics}}">
-                    <block wx:for="{{songInfo.lyrics}}" wx:key="item">
-                        <view class="row">{{item}}</view>
+            <scroll-view scroll-y class="scroll-view" scroll-top="{{scrollHeight - 40}}" scroll-with-animation bindscrolltolower="scrolltolower" lower-threshold="20">
+                <view class="top"></view>
+                <block wx:if="{{lyrics.length}}">
+                    <block wx:for="{{lyrics}}" wx:key="item">
+                        <view class="row {{currentLyricsIndex ==index ? 'activeColor':''}}" style="height: {{rowHeight}}px;line-height: {{rowHeight}}px;">{{item.text}}</view>
                     </block>
                 </block>
                 <block wx:else>
@@ -19,28 +28,64 @@
                         暂无歌词
                     </view>
                 </block>
+                <view class="bottom"></view>
             </scroll-view>
         </swiper-item>
     </swiper>
     <view class="control">
         <view class="progress">
             <view class="time current">
-                00:00:00
+                {{format.formatDate(currentTime)}}
             </view>
-            <progress class="jindu" percent="50" border-radius="10" stroke-width="3" color="#ed9063"></progress>
+            <slider class="jindu" value="{{percent}}" block-size="6" stroke-width="3" activeColor="#ed9063" bindchange="handleSliderChange" bindchanging="handleSliderChanging"></slider>
             <view class="time total">
-                05:20:00
+                {{format.formatDate(songTime)}}
             </view>
         </view>
         <view class="operation">
-            <view class="play-model iconfont icon-liebiaoxunhuan"></view>
-            <!-- <view class="play-model iconfont"></view>
-            <view class="play-model iconfont"></view> -->
-            <view class="previous iconfont icon-xiayigexiayishou-copy"></view>
-            <view class="play-pause iconfont icon-Play"></view>
-            <!-- <view class="play-pause iconfont icon-Pause"></view> -->
-            <view class="next iconfont icon-xiayigexiayishou"></view>
-            <view class="list iconfont icon-menu"></view>
+            <block wx:if="{{playModel === 'default'}}">
+                <view class="play-model iconfont icon-liebiaoxunhuan" bindtap="switchModel" data-model="default"></view>
+            </block>
+            <block wx:elif="{{playModel === 'random'}}">
+                <view class="play-model iconfont icon-suijibofang" bindtap="switchModel" data-model="random"></view>
+            </block>
+            <block wx:else>
+                <view class="play-model iconfont icon-danquxunhuan" bindtap="switchModel" data-model="only"></view>
+            </block>
+            <view class="previous iconfont icon-xiayigexiayishou-copy" bindtap="previousSongClick"></view>
+            <block wx:if="{{isPlay}}">
+                <view bindtap="playPauseClick" class="play-pause iconfont icon-Pause"></view>
+            </block>
+            <block wx:else>
+                <view bindtap="playPauseClick" class="play-pause iconfont icon-Play"></view>
+            </block>
+            <view class="next iconfont icon-xiayigexiayishou" bindtap="nextSongClick"></view>
+            <view class="list iconfont icon-menu" bindtap="playListClick"></view>
         </view>
     </view>
 </view>
+<page-container show="{{show}}" custom-style="{{customStyle}}">
+    <view class="page-container">
+        <view class="container-title">
+            <view class="jiacu">
+                播放列表
+            </view>
+            <view class="delete">
+                <view class="iconfont icon-delete" bindtap="deleteAllSongClick"></view>
+            </view>
+        </view>
+        <scroll-view scroll-y id="container-scroll" style="height: {{height}}rpx" class="container-scroll">
+            <block wx:for="{{playList}}" wx:key="id">
+                <view class="list-item {{item.id === songInfo.id ? 'activeColor':''}}"  bindtap="playSongClick" data-id="{{item.id}}">
+                    <view class="song-name">
+                        {{item.song_name}}
+                    </view>
+                    <view class="iconfonts-wrap">
+                        <view class="iconfont {{item.id === songInfo.id && isPlay ? 'icon-zanting_pause':'icon-Play'}}"></view>
+                        <view class="iconfont icon-chahao" catchtap="deleteSongClick" data-id="{{item.id}}"></view>
+                    </view>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+</page-container>

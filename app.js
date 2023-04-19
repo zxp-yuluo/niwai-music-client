@@ -1,3 +1,4 @@
+import {playerStore} from "./stores/player"
 App({
     onLaunch() {
         // 获取系统信息
@@ -18,6 +19,28 @@ App({
         this.globalData.menuWidth = menuButtonInfo.width;
         // 设备宽度
         this.globalData.clientWidth = systemInfo.windowWidth;
+        this.globalData.clientHeight = systemInfo.windowHeight;
+        // 播放模式
+        const playModel = wx.getStorageSync('playModel') 
+        if(!playModel) {
+            wx.setStorage({
+                key: "playModel",
+                data: 'default'
+            })
+        }
+        const playList = wx.getStorageSync('playList') 
+        let currentSong = wx.getStorageSync('currentSong') 
+        if(playList) {
+            const tempList = JSON.parse(playList) 
+            // playerStore.dispatch("playListAction",tempList)
+            playerStore.setState("playList",tempList)
+            if(currentSong) {
+                currentSong = JSON.parse(currentSong) 
+                playerStore.dispatch("getSongInfoDataAction",{id:currentSong.id,replay:false,bool: true})
+            }else {
+                playerStore.dispatch("getSongInfoDataAction",{id:tempList[0].id,replay:false,bool: true})
+            }
+        }
     },
     watch: function (variate, method) {
         var obj = this.globalData;
@@ -43,10 +66,5 @@ App({
         menuBotton: 0, // 胶囊距底部间距（保持底部间距一致）
         menuHeight: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致）
         menuWidth: 0, // 胶囊宽度
-        songInfo: { // 播放歌曲的信息
-            image: 'http://139.196.78.237:5000/image/default_song.png', //歌曲图片
-        },
-        image: "http://139.196.78.237:5000/image/default_song.png",
-        isPlay: false, // 是否正在播放
     }
 })

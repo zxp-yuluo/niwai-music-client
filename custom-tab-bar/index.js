@@ -1,5 +1,7 @@
 // custom-tab-bar/index.js
-const app = getApp();
+import {
+    playerStore
+} from "../stores/index"
 Component({
     /**
      * 组件的属性列表
@@ -15,9 +17,10 @@ Component({
         selected: 0,
         color: "#bfbfbf",
         selectedColor: "#ed9063",
-        songInfo: null,
+        songInfo: {
+            image: "/assess/images/tabbar/default_song.png"
+        },
         isPlay: false,
-        image: '',
         "list": [{
                 "pagePath": "/pages/home/home",
                 "iconPath": "/assess/images/tabbar/home.png",
@@ -47,14 +50,7 @@ Component({
      */
     lifetimes: {
         attached() {
-            const image = app.globalData.image
-            const isPlay = app.globalData.isPlay
-            this.setData({
-                image,
-                isPlay
-            },() => {
-                console.log(this.data.image,this.data.isPlay);
-            })
+            this.variableListener()
         }
     },
     methods: {
@@ -78,6 +74,29 @@ Component({
                     selected: index
                 })
             }
+        },
+        variableListener() {
+            playerStore.onStates(["songInfo", "isPlay"], ({
+                songInfo,
+                isPlay
+            }) => {
+                if (songInfo) {
+                    if(songInfo.url) {
+                        this.setData({
+                            songInfo
+                        })
+                    }else {
+                        this.setData({
+                            songInfo: {
+                                image: "/assess/images/tabbar/default_song.png"
+                            }
+                        })
+                    }
+                }
+                this.setData({
+                    isPlay
+                })
+            })
         }
     }
 })

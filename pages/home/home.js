@@ -26,7 +26,6 @@ Page({
     async getSongListData() {
         const result = await getSongList()
         const data = result.data
-        // console.log(data);
         const songList = []
         let temList = []
         for (let index = 0; index < data.length; index++) {

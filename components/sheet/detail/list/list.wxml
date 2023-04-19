@@ -1,0 +1,25 @@
+<!--components/sheet/detail/list/list.wxml-->
+<view class="sheet-song" style="height: {{listHeight}}px;">
+    <view class="sheet-song-title">
+        <view bindtap="playSheetClick">
+            <text class="all-play">播放全部</text>
+            <text class="play-number" wx:if="{{sheetList.song_info.length}}">（{{sheetList.song_info.length}}）</text>
+        </view>
+    </view>
+    <scroll-view class="sheet-song-list" scroll-y>
+        <block wx:for="{{sheetList.song_info}}" wx:key="id">
+            <view class="song-item {{item.id == id ? 'active' : ''}}" bindtap="playSongClick" data-id="{{item.id}}">
+                <view class="song-name">{{item.song_name}}</view>
+                <view class="song-other {{item.id == id ? 'active' : ''}}">
+                    <view class="item-author-name">
+                        {{item.author_name}}
+                    </view>
+                    <view class="other-line" wx:if="{{item.album_name}}" style="padding: 0 6rpx;">-</view>
+                    <view class="album-name" wx:if="{{item.album_name}}">
+                        {{item.album_name}}
+                    </view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>

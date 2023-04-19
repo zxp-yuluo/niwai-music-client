@@ -1,0 +1,15 @@
+<!--components/sheet/index/navbar/navbar.wxml-->
+<view class="custom-nav-bar" style="height:{{navBarHeight + 'px'}};padding: 0 {{menuRight + 'px'}};background-color: {{backgroundColor}};">
+    <view style="height:{{statusBarHeight + 'px'}}"></view>
+    <view class="content" style="line-height:{{contentHeight + 'px'}}">
+        <view class="custom-nav-bar-left iconfont icon-show_danjiantoujiantou_shang-copy1" style="width: {{menuWidth + 'px'}};height: {{menuHeight+'px'}};" bindtap="goBack">
+        </view>
+        <view class="custom-nav-bar-center" style="margin: 0 {{menuRight + 'px'}};">
+            <view class="words">
+                {{sheetName ? sheetName : "歌单详情"}}
+            </view>
+        </view>
+        <view class="custom-nav-bar-right" style="width: {{menuWidth + 'px'}};height: {{menuHeight+'px'}};">
+        </view>
+    </view>
+</view>

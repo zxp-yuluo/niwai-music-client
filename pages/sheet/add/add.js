@@ -23,7 +23,6 @@ Page({
     // 创建歌单
     async addSongSheetData(data) {
         const result = await addSongSheet(data)
-        console.log(result);
         if (result.status === 1) {
             wx.showToast({
                 title: result.message,
@@ -44,7 +43,6 @@ Page({
     // 删除图片
     async deleteImageData(name,isTips=false) {
         const result = await deleteImage(name)
-        console.log(result);
         if(isTips) return
         if(result.status === 1) {
             wx.showToast({
@@ -102,7 +100,6 @@ Page({
                             title: '上传失败！',
                             icon: 'error',
                         })
-                        console.log(err);
                     }
                 })
             },
@@ -156,7 +153,6 @@ Page({
                     const cover = this.data.cover
                     if(!cover) return
                     const name = cover.split('/').reverse()[0]
-                    console.log(name);
                     this.deleteImageData(name)
                 }
             }

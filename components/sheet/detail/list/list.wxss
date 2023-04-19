@@ -1,0 +1,55 @@
+/* components/sheet/detail/list/list.wxss */
+.sheet-song {
+    padding: 0 30rpx;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border-radius: 30rpx 30rpx 0 0;
+    
+}
+
+.sheet-song-title {
+    flex-shrink: 0;
+    display: flex;
+    padding: 30rpx 0;
+}
+.sheet-song-list {
+    flex: 1;
+    overflow: hidden;
+}
+.all-play {
+    font-size: 36rpx;
+    font-weight: 600;
+}
+.play-number {
+    font-size: 28rpx;
+    color: rgb(107, 106, 106);
+}
+
+.song-item {
+    margin-bottom: 30rpx;
+}
+
+.song-other {
+    display: flex;
+    padding-top: 8rpx;
+    align-items: center;
+    font-size: 24rpx;
+    color: rgb(107, 106, 106);
+}
+
+.item-author-name,
+.other-line {
+    flex-shrink: 0;
+}
+
+.album-name {
+    padding-right: 120rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.active {
+    color: #ed9063;
+}

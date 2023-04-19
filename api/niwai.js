@@ -14,7 +14,6 @@ export default function nwQuery(options) {
                     icon: 'error',
                     title: '请求错误！' + err.errMsg
                 })
-                console.log(JSON.stringify(err));
                 reject(err)
             }
         })

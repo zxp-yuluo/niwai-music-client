@@ -4,5 +4,11 @@
         <view bindtap="goBack" class="iconfont icon-show_danjiantoujiantou_shang-copy1"></view>
         <view bindtap="goHome" class="iconfont icon-shangdian-copy"></view>
     </view>
-    <view slot="center" id="songNameRotate" class="title">{{songInfo.song_name}}-{{songInfo.author_name}}</view>
+    <block wx:if="{{songInfo.song_name}}">
+        <view slot="center" id="songNameRotate" class="title">{{songInfo.song_name}}-{{songInfo.author_name}}</view>
+    </block>
+    <block wx:else>
+        <view slot="center" style="text-align: center;">歌曲播放</view>
+    </block>
+    
 </nw-navbar>

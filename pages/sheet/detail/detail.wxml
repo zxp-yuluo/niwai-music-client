@@ -1,4 +1,11 @@
 <!--pages/sheet/detail/detail.wxml-->
-<scroll-view class="sheet-detail" scroll-y>
-    {{id}}
-</scroll-view>
+<view class="bg-image-wrap">
+    <view class="sheet-detail">
+        <nw-sheet-detail-navbar />
+        <view style="height: {{navBarHeight}}px;"></view>
+        <nw-sheet-detail-info class="sheet-info" sheetList="{{sheetList}}" />
+        <nw-sheet-detail-list sheetList="{{sheetList}}" listHeight="{{listHeight}}" />
+    </view>
+    <view class="bg-image" style="background-image: url({{sheetList.cover}});"></view>
+    <view class="bg-grey"></view>
+</view>

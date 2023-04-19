@@ -10,7 +10,9 @@ Page({
      */
     data: {
         id: '',
-        navBarHeight: 0
+        navBarHeight: 0,
+        sheetList: null,
+        listHeight: 0,
     },
 
     /**
@@ -20,65 +22,32 @@ Page({
         const id = options.id
         this.setData({
             id,
-            navBarHeight: app.globalData.navBarHeight
+            navBarHeight: app.globalData.navBarHeight,
+            clientHeight:  app.globalData.clientHeight
         })
         this.getSheetInfoByIdData(id)
     },
+    onReady() {
+        this.getDetailInfoHeight()
+    },
+    // 网络请求获取歌单信息
     async getSheetInfoByIdData(id) {
         const result = await getSheetInfoById(id)
-        if(result.status === 1) {
-            console.log(result);
+        if (result.status === 1) {
+            result.data.song_info = JSON.parse(result.data.song_info)
             this.setData({
                 sheetList: result.data
             })
         }
     },
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
+    getDetailInfoHeight() {
+        const query = wx.createSelectorQuery()
+        query.select('.sheet-info').boundingClientRect(rect => {
+            const infoHeight = rect.height
+            const {navBarHeight,clientHeight} = this.data
+            this.setData({
+                listHeight: clientHeight - navBarHeight - infoHeight
+            })
+        }).exec()
     }
 })

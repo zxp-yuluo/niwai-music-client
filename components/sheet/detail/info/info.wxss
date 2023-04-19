@@ -1,0 +1,169 @@
+/* components/sheet/detail/info/info.wxss */
+@import "../../../../iconfont/iconfont.wxss";
+
+.detail-info {
+    display: flex;
+}
+
+.bg-image-wrap {
+    padding: 0 30rpx 30rpx 30rpx;
+}
+
+.detail-info-wrap {
+    padding-top: 40rpx;
+    color: #F6F7FB;
+}
+
+.detail-info-left {
+    margin-right: 30rpx;
+    flex-shrink: 0;
+    width: 180rpx;
+    height: 180rpx;
+}
+
+.detail-info-left .sheet-cover {
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+
+
+.sheet-name {
+    font-size: 32rpx;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+}
+
+.sheet-author {
+    margin-top: 30rpx;
+    display: flex;
+    align-items: center;
+}
+
+.author-avatar {
+    margin-right: 16rpx;
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+}
+
+.author-name {
+    font-size: 24rpx;
+    font-weight: 600;
+}
+
+.detail-info-describe {
+    display: flex;
+    align-items: center;
+    margin-top: 10rpx;
+}
+
+.describe-text {
+    line-height: 64rpx;
+    font-size: 24rpx;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.detail-info-describe .iconfont {
+    line-height: 64rpx;
+    width: 64rpx;
+    text-align: right;
+}
+
+.page-container {
+    position: relative;
+}
+
+.show-sheet-info-bg,
+.show-sheet-info-grey {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.show-sheet-info-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(100px);
+}
+
+.show-sheet-info-grey {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.show-sheet-info {
+    position: relative;
+    height: 100%;
+    /* background: gold; */
+    color: #fff;
+    z-index: 1;
+}
+
+.delete-show {
+    position: fixed;
+    padding: 16rpx 30rpx 0 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.show-sheet-placeholder {
+    height: 120rpx;
+    box-sizing: content-box;
+}
+
+.delete-show .iconfont {
+    font-size: 64rpx;
+}
+
+.show-sheet-image {
+    display: block;
+    margin: 0 auto;
+    width: 240rpx;
+    height: 240rpx;
+    border-radius: 16rpx;
+}
+
+.show-sheet-name {
+    display: -webkit-box;
+    margin: 30rpx 120rpx;
+    text-align: center;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+}
+
+.show-sheet-line {
+    margin: 0 90rpx;
+    position: relative;
+    height: 1rpx;
+    background-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) 10%,
+            rgba(255, 255, 255, 0.3) 20%,
+            rgba(255, 255, 255, 0.4) 30%,
+            rgba(255, 255, 255, 0.5) 40%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0.5) 60%,
+            rgba(255, 255, 255, 0.4) 70%,
+            rgba(255, 255, 255, 0.3) 80%,
+            rgba(0, 0, 0, 0) 90%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.show-sheet-describe {
+    padding: 30rpx 80rpx 120rpx 80rpx;
+    font-size: 24rpx;
+    line-height: 46rpx;
+}

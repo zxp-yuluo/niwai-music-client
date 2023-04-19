@@ -22,8 +22,7 @@
         "color": "#000000",
         "selectedColor": "#000000",
         "backgroundColor": "#000000",
-        "list": [
-            {
+        "list": [{
                 "pagePath": "pages/home/home",
                 "iconPath": "/assess/images/tabbar/home.png",
                 "selectedIconPath": "/assess/images/tabbar/home-active.png",
@@ -42,6 +41,10 @@
             "desc": "你的位置信息将用于小程序位置接口的效果展示"
         }
     },
+    "requiredPrivateInfos": [
+        "getLocation"
+    ],
     "style": "v2",
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "requiredBackgroundModes": ["audio"]
 }

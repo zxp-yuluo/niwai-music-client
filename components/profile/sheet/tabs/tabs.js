@@ -68,7 +68,6 @@ Component({
             // const id = e.currentTarget.dataset.info.id
             const id = e.currentTarget.dataset.info
             const selected = this.data.selected
-            console.log(id, selected);
             wx.showActionSheet({
                 itemList: ['删除', '分享'],
                 success: (data) => {
